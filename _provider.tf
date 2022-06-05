@@ -4,6 +4,10 @@ terraform {
       source = "scaleway/scaleway"
       version = "2.2.1"
     }
+    helm = {
+      source = "hashicorp/helm"
+      version = "2.5.1"
+    }
   }
   required_version = ">= 0.13"
 }
