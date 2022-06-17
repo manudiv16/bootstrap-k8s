@@ -1,0 +1,15 @@
+provider: "scaleway"
+extraArgs:
+  - --source=ingress
+  - --txt-prefix=external-dns.
+env:
+  - name: "SCW_ACCESS_KEY"
+    valueFrom:
+      secretKeyRef:
+        name: scaleway-access
+        key: access_key
+  - name: "SCW_SECRET_KEY"
+    valueFrom:
+      secretKeyRef:
+        name: scaleway-access
+        key: secret_key

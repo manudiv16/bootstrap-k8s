@@ -36,4 +36,5 @@ terraform.rc
 .terraform.lock.hcl
 # End of https://www.toptal.com/developers/gitignore/api/terraform
 kubeconfig.yaml
+vars.tf
 .DS_Store
