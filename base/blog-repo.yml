@@ -9,7 +9,7 @@ spec:
     namespace: blog
     server: "https://kubernetes.default.svc"
   source:
-    path: infra
+    path: infra-test-argocd
     repoURL: "git@github.com:manudiv16/manudiv-blog.git"
     targetRevision: HEAD
     directory:
