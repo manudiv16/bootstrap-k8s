@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: manublog
+  name: manuinfra
   namespace: argocd
 spec:
   destination:
     name: ""
-    namespace: overlays/local
+    namespace: infra
     server: "https://kubernetes.default.svc"
   source:
-    path: infra-test-argocd
-    repoURL: "git@github.com:manudiv16/bootstrap-k8s.git"
+    path: overlays/local
+    repoURL: "https://github.com/manudiv16/bootstrap-k8s.git"
     targetRevision: bootstrap-without-terraform-stuff
     directory:
       recurse: true
