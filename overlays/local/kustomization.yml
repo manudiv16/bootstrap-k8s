@@ -5,7 +5,7 @@ bases:
 
 resources:
   - "https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml"
-
+  - ../../bootstrap/overlays/local
 patchesStrategicMerge:
   - "argocd-ingress.yml"
 patches:

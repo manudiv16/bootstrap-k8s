@@ -5,4 +5,3 @@ resources:
   - "cluster-issuer.yml"
   - "argocd-ingress.yml"
   - "blog-repo.yml"
-  - "infra-bootstrap.yml"
