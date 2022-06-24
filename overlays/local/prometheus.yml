@@ -1,8 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus
-  namespace: argocd
-spec:
+  name: promote
   source:
-    path: apps/prometheus-stack/local
+    helm:
+      parameters:
+        - name: kubeEtcd.service.targetPort
+          value: "2381"

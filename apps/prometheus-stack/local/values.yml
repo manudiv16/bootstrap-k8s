@@ -1,4 +1,0 @@
-prometheus-community:
-  kubeEtcd:
-    service:
-      targetPort: 2381

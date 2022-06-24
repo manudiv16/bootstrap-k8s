@@ -1,22 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus
-  namespace: argocd
+  name: promote
 spec:
   destination:
-    namespace: monitoring
+    namespace: argocd
     server: "https://kubernetes.default.svc"
   source:
-    path: apps/prometheus-stack/prod
-    repoURL: "https://github.com/manudiv16/bootstrap-k8s.git"
-    targetRevision: bootstrap-without-terraform-stuff
-    directory:
-      recurse: true
+    repoURL: "https://prometheus-community.github.io/helm-charts"
+    targetRevision: 36.2.0
+    chart: kube-prometheus-stack
+    helm:
+      parameters:
+        - name: kubeEtcd.service.targetPort
+          value: "2381"
   project: default
   syncPolicy:
     automated:
-      prune: false
-      selfHeal: false
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
