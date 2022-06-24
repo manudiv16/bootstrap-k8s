@@ -5,13 +5,12 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: ""
     namespace: monitoring
     server: "https://kubernetes.default.svc"
   source:
     path: apps/prometheus-stack/prod
     repoURL: "https://github.com/manudiv16/bootstrap-k8s.git"
-    targetRevision: HEAD
+    targetRevision: bootstrap-without-terraform-stuff
     directory:
       recurse: true
   project: default
