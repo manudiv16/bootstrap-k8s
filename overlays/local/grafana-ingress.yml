@@ -19,7 +19,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: kube-grafana-stack-grafana
+                name: kube-prometheus-stack-grafana
                 port:
                   number: 80
   tls:
