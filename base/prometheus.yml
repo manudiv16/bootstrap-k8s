@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: argocd
+spec:
+  destination:
+    name: ""
+    namespace: monitoring
+    server: "https://kubernetes.default.svc"
+  source:
+    path: apps/prometheus-stack/prod
+    repoURL: "https://github.com/manudiv16/bootstrap-k8s.git"
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true

@@ -8,6 +8,7 @@ resources:
   - ../../bootstrap/overlays/local
 patchesStrategicMerge:
   - "argocd-ingress.yml"
+  - "prometheus.yml"
 patches:
   - patch: |-
       - op: replace

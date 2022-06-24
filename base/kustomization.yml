@@ -5,3 +5,4 @@ resources:
   - "cluster-issuer.yml"
   - "argocd-ingress.yml"
   - "blog-repo.yml"
+  - "prometheus.yml"
