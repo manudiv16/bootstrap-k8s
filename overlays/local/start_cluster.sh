@@ -1,6 +1,6 @@
-# kind create cluster --config ./overlays/local/kind.yml
+kind create cluster --config ./overlays/local/kind.yml
 
-# sleep 20
+sleep 20
 kubectl create namespace argocd 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 sleep 20

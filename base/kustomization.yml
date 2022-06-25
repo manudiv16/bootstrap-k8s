@@ -8,3 +8,4 @@ resources:
   - "prometheus.yml"
   - "prometheus-crds.yml"
   - "ingress-nginx-metrics.yml"
+  - "grafana-ingress.yml"

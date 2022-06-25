@@ -7,9 +7,9 @@ resources:
   - "https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml"
   - ../../bootstrap/overlays/local
   - "prometheus-ingress.yml"
-  - "grafana-ingress.yml"
 
 patchesStrategicMerge:
+  - "grafana-ingress.yml"
   - "argocd-ingress.yml"
   - "prometheus.yml"
   - "nginx-config-prometheus.yml"

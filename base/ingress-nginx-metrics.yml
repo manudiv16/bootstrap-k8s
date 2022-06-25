@@ -3,11 +3,6 @@ kind: Service
 metadata:
   labels:
     app: ingress-nginx-metrics
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.2.1
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "10254"

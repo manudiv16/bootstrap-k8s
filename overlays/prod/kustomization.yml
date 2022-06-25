@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
   - ../../base
 resources:
-  - "externaldns.yml"
+  - ../../bootstrap/overlays/prod

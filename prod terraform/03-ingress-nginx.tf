@@ -20,6 +20,7 @@ resource "helm_release" "nginx_ingress" {
 
   repository = "https://kubernetes.github.io/ingress-nginx"
   chart      = "ingress-nginx"
+  version    = "v1.2.1"
 
   set {
     name  = "controller.service.loadBalancerIP"
@@ -49,4 +50,20 @@ resource "helm_release" "nginx_ingress" {
     name  = "controller.service.annotations.service\\.beta\\.kubernetes\\.io/scw-loadbalancer-use-hostname"
     value = "true"
   }
+
+  set {
+    name  = "controller.metrics.enabled"
+    value = "true"
+  }
+
+  set {
+    name  = "controller.podAnnotations.\\prometheus\\.io/scrape"
+    value = "true"
+  }
+
+  set {
+    name  = "controller.podAnnotations.\\prometheus\\.io/port"
+    value = "10254"
+  }
+
 }
