@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: "https://github.com/manudiv16/bootstrap-k8s.git"
-    targetRevision: bootstrap-without-terraform-stuff
+    targetRevision: main
   destination:
     server: "https://kubernetes.default.svc"
     namespace: infra
