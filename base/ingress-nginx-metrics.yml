@@ -4,7 +4,7 @@ metadata:
   name: ingress-nginx-controller
   namespace: monitoring
   labels:
-    app: ingress-nginx-controller
+    app: ingress-nginx
     release: kube-prometheus-stack
 spec:
   endpoints:
@@ -16,4 +16,4 @@ spec:
       - ingress-nginx
   selector:
     matchLabels:
-      app: ingress-nginx-controller
+      app: ingress-nginx
