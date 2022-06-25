@@ -21,7 +21,7 @@ spec:
               service:
                 name: kube-prometheus-stack-grafana
                 port:
-                  number: 80
+                  name: http-web
   tls:
     - hosts:
         - grafana.local
