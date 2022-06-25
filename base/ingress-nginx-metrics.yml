@@ -9,7 +9,7 @@ metadata:
 spec:
   endpoints:
     - interval: 30s
-      port: prometheus
+      port: monitoring
   namespaceSelector:
     matchNames:
       - ingress-nginx
