@@ -8,9 +8,11 @@ resources:
   - ../../bootstrap/overlays/local
   - "prometheus-ingress.yml"
   - "grafana-ingress.yml"
+
 patchesStrategicMerge:
   - "argocd-ingress.yml"
   - "prometheus.yml"
+  - "nginx-config-prometheus.yml"
 patches:
   - patch: |-
       - op: replace
