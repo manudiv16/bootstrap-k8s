@@ -7,3 +7,4 @@ resources:
   - "blog-repo.yml"
   - "prometheus.yml"
   - "prometheus-crds.yml"
+  - "ingress-nginx-metrics.yml"
