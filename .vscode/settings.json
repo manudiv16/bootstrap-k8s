@@ -1,0 +1,6 @@
+{
+	"yaml.schemas": {
+		"file:///home/manu/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+		"https://json.schemastore.org/kustomization.json": "file:///Users/franrubio/Documents/github/bootstrap-k8s/manifest/base/kustomization.yml"
+	}
+}

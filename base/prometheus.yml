@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kube-prometheus-stack
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "10"
+spec:
+  destination:
+    namespace: monitoring
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    repoURL: "https://prometheus-community.github.io/helm-charts"
+    targetRevision: 34.1.1
+    helm:
+      skipCrds: true
+      parameters:
+        - name: kubeEtcd.service.targetPort
+          value: "2381"
+    chart: kube-prometheus-stack
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
