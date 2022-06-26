@@ -9,4 +9,3 @@ resources:
 patchesStrategicMerge:
   - "grafana-ingress.yml"
   - "prometheus.yml"
-  - "nginx-config-prometheus.yml"
