@@ -5,3 +5,4 @@ resources:
   - "monitoring.yml"
   - "ingress-nginx.yml"
   - "cert-manager.yml"
+  - "argocd.yml"
