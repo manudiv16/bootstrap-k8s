@@ -4,10 +4,9 @@ bases:
   - ../../base
 
 resources:
-  - ../../bootstrap/overlays/local
+  - "prometheus-ingress.yml"
 
 patchesStrategicMerge:
-  - "monitoring.yml"
-  - "argocd.yml"
-  - "ingress-nginx.yml"
-  - "cert-manager.yml"
+  - "grafana-ingress.yml"
+  - "prometheus.yml"
+  - "nginx-config-prometheus.yml"
