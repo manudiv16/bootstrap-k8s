@@ -8,6 +8,5 @@ resources:
 
 patchesStrategicMerge:
   - "monitoring.yml"
-  - "argocd.yml"
   - "ingress-nginx.yml"
   - "cert-manager.yml"
