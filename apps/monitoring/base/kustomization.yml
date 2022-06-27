@@ -4,4 +4,4 @@ resources:
   - "grafana-ingress.yml"
   - "prometheus.yml"
   - "prometheus-crds.yml"
-  - "ingress-nginx-monitor.yml"
+  # - "ingress-nginx-monitor.yml"
