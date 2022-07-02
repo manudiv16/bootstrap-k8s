@@ -1,7 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - "grafana-ingress.yml"
+  - "namespace.yml"
   - "prometheus.yml"
   - "prometheus-crds.yml"
-  # - "ingress-nginx-monitor.yml"
+  - "grafana-ingress.yml"
+  - "ingress-nginx-monitor.yml"
