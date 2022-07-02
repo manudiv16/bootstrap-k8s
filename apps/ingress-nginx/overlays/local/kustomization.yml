@@ -5,6 +5,5 @@ bases:
 
 resources:
   - "https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml"
-
-patchesStrategicMerge:
-  - "nginx-config-prometheus.yml"
+# patchesStrategicMerge:
+#   - "nginx-config-prometheus.yml"
