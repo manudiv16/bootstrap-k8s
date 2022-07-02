@@ -7,7 +7,7 @@ resources:
   - ../../bootstrap/overlays/local
 
 patchesStrategicMerge:
-  # - "monitoring.yml"
+  - "monitoring.yml"
   - "argocd.yml"
   - "ingress-nginx.yml"
   - "cert-manager.yml"
